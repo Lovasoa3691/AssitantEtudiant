@@ -23,7 +23,7 @@ const Dashboard: React.FC = () => {
   const getUser = async (id: number) => {
     try {
       const response = await axios.get(
-        `http://192.168.137.55:5000/api/users/${id}`,
+        `https://assitantetudiant.onrender.com/api/users/${id}`,
       );
       setUserName(response.data.nom);
     } catch (error) {
