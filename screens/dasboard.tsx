@@ -46,13 +46,13 @@ const Dashboard: React.FC = () => {
   }, []);
 
   const emploiDuTemps: Seance[] = [
-    {heure: '08:00', matiere: 'Mathématiques', salle: 'Salle 201'},
-    {heure: '10:00', matiere: 'Histoire', salle: 'Salle 105'},
+    {heure: '08:00', matiere: 'C#', salle: 'Salle A1'},
+    {heure: '10:00', matiere: 'UML', salle: 'Salle A1'},
   ];
 
   const taches: string[] = [
-    'Devoir Physique (à rendre demain)',
-    'Exposé Histoire (vendredi prochain)',
+    'Projet Java (à corriger demain)',
+    'Projet C# (lundi prochain)',
   ];
 
   useEffect(() => {
@@ -167,10 +167,6 @@ const Dashboard: React.FC = () => {
         <Text style={styles.cardTitle}>📌 Rappel</Text>
         <Text style={styles.cardContent}>Contrôle de Math lundi prochain</Text>
       </View>
-
-      <TouchableOpacity style={styles.chatButton}>
-        <Text style={styles.chatButtonText}>💬 Parler à l’assistant IA</Text>
-      </TouchableOpacity>
     </ScrollView>
   );
 };

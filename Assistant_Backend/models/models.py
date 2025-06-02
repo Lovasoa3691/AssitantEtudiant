@@ -22,8 +22,8 @@ class Planning(db.Model):
     date_plan = db.Column(db.Date, nullable=False)
     heure_deb_plan = db.Column(db.Time, nullable=False)
     heure_fin_plan = db.Column(db.Time, nullable=False)
-    titre = db.Column(db.String(255), nullable=False)
-    status_plan = db.Column(db.String(255), nullable=False)
+    titre = db.Column(db.String(20), nullable=False)
+    status_plan = db.Column(db.String(10), nullable=False)
 
 
 class Revision(db.Model):
@@ -52,5 +52,5 @@ class AssistantIA(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     utilisateur_id_ut = db.Column(db.Integer, db.ForeignKey('Utilisateur.id_ut'), nullable=False)
     message = db.Column(db.String(100), nullable=False)
-    reponse = db.Column(db.String(255), nullable=False)
+    reponse = db.Column(db.String(100), nullable=False)
     date = db.Column(db.Date, nullable=False)
